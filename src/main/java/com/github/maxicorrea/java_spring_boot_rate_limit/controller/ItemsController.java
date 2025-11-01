@@ -12,15 +12,16 @@ import com.github.maxicorrea.java_spring_boot_rate_limit.service.ItemService;
 public class ItemsController {
 
 	private final ItemService itemService;
-	
-	public ItemsController(
-			final ItemService itemService) {
+
+	public ItemsController(final ItemService itemService) {
 		this.itemService = itemService;
 	}
-	
+
 	@GetMapping
 	public ResponseEntity<?> getItems() {
 		return ResponseEntity.ok(itemService.getAll());
 	}
 	
 }
+
+
